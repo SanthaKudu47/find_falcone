@@ -1,4 +1,4 @@
-import classes from "@src/components/Section1/section1.module.css";
+import classes from "./section1.module.css";
 import mainImage from "@assets/main_image_2.svg";
 import Widget from "../widget";
 import { useState } from "react";
