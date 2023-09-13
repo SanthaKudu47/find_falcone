@@ -1,0 +1,97 @@
+@import '../../../index.css';
+
+
+
+.dropHeader {
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--variant-7);
+    padding: 0px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.wrapper {
+    display: flex;
+    background-color: var(--variant-2);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    max-width: 280px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+
+.wrapper__input {
+    border: none;
+    background-color: var(--variant-2);
+    width: 100%;
+    outline: none;
+    color: white;
+    border-top-left-radius: 5px;
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+
+wrapper__input:focus,
+wrapper__input:focus,
+wrapper__input:focus {
+    outline: none;
+}
+
+.wrapper__closeIcon {
+    display: flex;
+    cursor: pointer;
+    color: var(--variant-1);
+    min-width: 35px;
+}
+
+.wrapper__button {
+    display: flex;
+    background-color: var(--variant-1);
+    min-width: 35px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+
+}
+
+.wrapper__buttonIcon {
+    width: 17px;
+    height: 16px;
+}
+
+.wrapper__drawer {
+    --max_height: 250px;
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background-color: var(--variant-3);
+    max-width: 250px;
+    margin-top: 5px;
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    max-height: var(--max_height);
+    overflow-y: auto;
+    left: 0px;
+    right: 0px;
+    top: 40px;
+    z-index: 10;
+}
+
+/* web */
+@media only screen and (min-width:430px) {
+    .dropHeader {
+        font-size: 25px;
+    }
+}

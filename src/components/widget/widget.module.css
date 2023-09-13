@@ -1,0 +1,76 @@
+@import '../../index.css';
+
+.widget {
+    background-color: var(--variant-8);
+    min-width: 320px;
+    width: 40%;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.widget__head {
+    font-family: 'Roboto', sans-serif;
+    color: var(--variant-7);
+    font-size: 25px;
+    font-weight: normal;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: end;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.widget__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.widget__section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+    padding: 5px;
+}
+
+.widget__image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex: 1;
+    min-height: 80px;
+
+}
+
+.widget__text {
+    flex: 1;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    text-align: center;
+}
+
+.widget__text h4 {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--variant-7);
+    font-size: 12px;
+    font-weight: normal
+}
+
+
+/* web */
+@media only screen and (min-width:430px) {
+    .widget {
+        width: 50%;
+        min-width: 380px;
+        padding: 0px;
+    }
+}

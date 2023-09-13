@@ -1,0 +1,79 @@
+@import '../../index.css';
+
+.container {
+    box-sizing: border-box;
+    position: relative;
+    max-width: 290px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5px;
+    padding: 2px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--variant-7);
+    background-color: var(--variant-8);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 120px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.container__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-weight: normal;
+    text-align: left;
+    gap: 5px;
+
+
+}
+
+.container__left h4 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: normal;
+}
+
+.container__middle {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.container__middle h4 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: normal;
+}
+
+.container__right {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 300;
+    text-align: left;
+    gap: 5px;
+
+}
+
+.container__right h4 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: normal;
+}
+
+/* web */
+@media only screen and (min-width:430px) {}

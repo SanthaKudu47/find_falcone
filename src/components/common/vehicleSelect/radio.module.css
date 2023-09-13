@@ -1,0 +1,51 @@
+@import '../../../index.css';
+
+.radio__wrapper {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.radio__custom {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--variant-9);
+    cursor: pointer;
+
+}
+
+
+.radio__innerCircle {
+    border-radius: 100%;
+    width: 60%;
+    height: 60%;
+    display: block;
+    background-color: black;
+
+}
+
+.radio__label {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: var(--variant-7);
+    font-size: 20px;
+    font-weight: normal;
+    cursor: pointer;
+    max-width: 250px;
+
+}
+
+.disabled {
+    background-color: var(--variant-10);
+
+}
+
+.text__disabled {
+    color: var(--variant-10);
+}

@@ -1,0 +1,70 @@
+@import '../../index.css';
+
+
+
+.container {
+
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.container__line1 {
+    padding: 0px;
+    color: var(--variant-7);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.container__line2 {
+    padding: 0px;
+    color: var(--variant-7);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.container__button {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: normal;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--variant-8);
+    font-family: 'Roboto', sans-serif;
+    color: var(--font-primary);
+
+}
+
+/* web */
+@media only screen and (min-width:430px) {
+    .container__button {
+        font-size: 30px;
+    }
+    .container__line1{
+        font-size: 30px;
+    }
+
+    .container__line2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+}

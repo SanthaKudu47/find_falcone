@@ -1,0 +1,40 @@
+@import '../../index.css';
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.container h4 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container__time {
+    font-weight: normal;
+    color: var(--variant-7);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.container__button {
+    font-family: 'Roboto', sans-serif;
+    color: var(--font-primary);
+    font-size: 30px;
+    font-weight: normal;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+.container__link {
+    text-decoration: none;
+
+}

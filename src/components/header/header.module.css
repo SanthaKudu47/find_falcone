@@ -1,0 +1,142 @@
+@import '../../index.css';
+
+.header {
+    background-color: var(--variant-4);
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+    top: 0px;
+}
+
+.header__content {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 10px;
+}
+
+.header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.header__title {
+    font-family: 'Roboto', sans-serif;
+    color: var(--variant-7);
+    font-size: 15px;
+    font-weight: normal;
+    display: flex;
+    flex-shrink: 0;
+
+}
+
+.header__navList {
+    display: none;
+}
+
+.header__mobileNav {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+.header__mobileNav img {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    color: var(--variant-4);
+    cursor: pointer;
+}
+
+
+.header__mobileDrawer {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    padding: 10px;
+    z-index: 100;
+    height: 100vh;
+    background-color: var(--variant-4);
+}
+
+.header__mobileDrawer ul {
+    list-style: none;
+    color: var(--variant-7);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    padding: 0px;
+
+}
+
+.header__mobileDrawer ul li {
+    display: flex;
+    padding: 10px;
+
+}
+
+.header__mobileDrawer ul li:hover {
+    background-color: var(--variant-7);
+    color: var(--variant-4);
+}
+
+.header__navItem {
+    text-decoration: none;
+    color: var(--variant-7);
+    font-size: 17px;
+}
+
+
+
+
+
+/* web */
+@media only screen and (min-width:430px) {
+    .header__content {
+        position: relative;
+        max-width: 1280px;
+
+    }
+
+    .header__title {
+        font-size: 20px;
+
+    }
+
+    .header__nav {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+
+
+    }
+
+    .header__navList {
+        list-style: none;
+        color: var(--variant-7);
+        display: flex;
+        gap: 30px;
+
+    }
+
+
+
+    .header__navItem:hover {
+        color: white;
+    }
+
+    .header__mobileNav {
+        display: none;
+    }
+}
