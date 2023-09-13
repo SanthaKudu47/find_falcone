@@ -10,6 +10,7 @@ import Trip from "../trip";
 import FindFalcone from "../findFalcone";
 import { useContext } from "react";
 import { SkeltonTwo } from "../common/skeltons";
+import { useEffect } from "react";
 
 function parseData(
   data: IPlanet[],
@@ -28,6 +29,9 @@ function planetConverter(from: planetType): ItemData {
 
 function App() {
   const { availableList, selected, desCount } = useContext(PlanetsContext);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Container>
