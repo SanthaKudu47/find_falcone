@@ -12,16 +12,16 @@ import { IPlanet } from "../common/interfaces/planet.interface";
 function selectShip(name: string | null) {
   switch (name) {
     case "pod":
-      return <SpacePod height={60} width={60} />;
+      return <SpacePod height={60} width={60} enabled={true} />;
 
     case "rocket":
-      return <SpaceRocket width={47} height={72} />;
+      return <SpaceRocket width={47} height={72} enabled={true} />;
 
     case "ship":
-      return <SpaceShip width={52} height={75} />;
+      return <SpaceShip width={52} height={75} enabled={true} />;
 
     case "shuttle":
-      return <SpaceShuttle width={41} height={73} />;
+      return <SpaceShuttle width={41} height={73} enabled={true} />;
 
     default:
       return <Default height={60} width={60} />;
