@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { DefaultPlanet, Donlon, selectPlanet } from "../common/planets";
+import { selectPlanet } from "../common/planets";
 import classes from "./trip.module.css";
 import { ShipsContext } from "@src/context/shipContext";
 import Default from "../widget/ships/Default";

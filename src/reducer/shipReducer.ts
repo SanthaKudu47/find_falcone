@@ -12,19 +12,19 @@ function isAvailableInDisposal(shipName: ShipType, state: ShipStateType) {
   return state.disposal[shipName] > 0 ? true : false;
 }
 
-function isAvailableInSelection(shipName: ShipType, state: ShipStateType) {
-  let isEntry = false;
-  for (let index = 0; index < state.selected.length; index++) {
-    const element = state.selected[index];
-    if (element) {
-      if (element === shipName) {
-        isEntry = true;
-        break;
-      }
-    }
-  }
-  return isEntry;
-}
+// function isAvailableInSelection(shipName: ShipType, state: ShipStateType) {
+//   let isEntry = false;
+//   for (let index = 0; index < state.selected.length; index++) {
+//     const element = state.selected[index];
+//     if (element) {
+//       if (element === shipName) {
+//         isEntry = true;
+//         break;
+//       }
+//     }
+//   }
+//   return isEntry;
+// }
 
 function shipReducer(ships: ShipStateType, action: ShipStateAction) {
   switch (action.type) {
@@ -34,7 +34,7 @@ function shipReducer(ships: ShipStateType, action: ShipStateAction) {
       newState.errors = [];
       newState.selected = [null, null, null, null];
       const data = action.value as ShipValueType1;
-      data.forEach((ship, index) => {
+      data.forEach((ship) => {
         newState.disposal[ship.name as ShipType] = ship.total_no;
       });
 

@@ -5,12 +5,8 @@ import { useState, useEffect, useRef, useContext } from "react";
 import ItemData from "../interfaces/item.interface";
 import CloseIcon from "./closeIcon";
 import SpinnerAni from "./spinner";
-import {
-  PlanetsContextDispatch,
-  initialPlanetState,
-} from "@src/context/planetContext";
+import { PlanetsContextDispatch } from "@src/context/planetContext";
 import { ShipsContextDispatch } from "@src/context/shipContext";
-import { selectPlanet } from "../planets";
 
 const defaultValue = "None";
 const deBounceTime = 1000;
@@ -62,9 +58,7 @@ export default function DropDown({
     //check
   }, [data]);
 
-  function dropButtonClickHandler(
-    event: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) {
+  function dropButtonClickHandler() {
     setOpenStatus(!isOpen);
   }
   function outSideClickHandler(e: MouseEvent) {

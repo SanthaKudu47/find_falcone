@@ -1,4 +1,4 @@
-import { ShipsContext, ShipsContextDispatch } from "@src/context/shipContext";
+import { ShipsContext } from "@src/context/shipContext";
 import Default from "./ships/Default";
 import SpaceRocket from "./ships/SpaceRocket";
 import SpaceShip from "./ships/SpaceShip";

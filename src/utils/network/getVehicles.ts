@@ -1,4 +1,4 @@
-import axios, { AxiosResponse, AxiosError } from "axios";
+import axios, { AxiosError } from "axios";
 import appToast from "../toast";
 import { ShipData } from "@src/context/types/shipStateTypes";
 

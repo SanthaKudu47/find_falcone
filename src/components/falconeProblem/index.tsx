@@ -1,5 +1,5 @@
 import planetsAndVehicles from "@assets/planets-vehicles.jpg";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import classes from "./problem.module.css";
 
 function FalconeProblem() {

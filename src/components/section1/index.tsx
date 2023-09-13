@@ -1,6 +1,5 @@
 import classes from "@src/components/Section1/section1.module.css";
 import mainImage from "@assets/main_image_2.svg";
-import bg from "@assets/bg.png";
 import Widget from "../widget";
 import { useState } from "react";
 import { ArrowLeft, ArrowRight } from "../common/arrowIcons";

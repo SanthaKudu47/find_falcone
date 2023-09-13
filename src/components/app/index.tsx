@@ -1,7 +1,6 @@
 import Container from "../common/container";
 import DropDown from "../common/dropdown";
 import { planetType } from "../common/dropdown/planets";
-import { vehicleType } from "../common/dropdown/vehicles";
 import ItemData from "../common/interfaces/item.interface";
 import classes from "./app.module.css";
 import { PlanetsContext } from "@src/context/planetContext";
@@ -9,7 +8,7 @@ import { IPlanet } from "../common/interfaces/planet.interface";
 import VehicleSelect from "../common/vehicleSelect";
 import Trip from "../trip";
 import FindFalcone from "../findFalcone";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { SkeltonTwo } from "../common/skeltons";
 
 function parseData(
@@ -23,9 +22,9 @@ function planetConverter(from: planetType): ItemData {
   return { value: from.name, info: from.distance.toString() };
 }
 
-function vehicleConverter(from: vehicleType): ItemData {
-  return { value: from.name, info: from.speed.toString() };
-}
+// function vehicleConverter(from: vehicleType): ItemData {
+//   return { value: from.name, info: from.speed.toString() };
+// }
 
 function App() {
   const { availableList, selected, desCount } = useContext(PlanetsContext);
@@ -40,7 +39,7 @@ function App() {
           {availableList && availableList.length > 0 ? (
             <>
               {Array.from("1".repeat(desCount)).map((v, index) => (
-                <div key={index}>
+                <div key={`${v}_${index}`}>
                   <DropDown
                     data={parseData(availableList, planetConverter)}
                     title={`Destination ${index + 1}`}
@@ -63,7 +62,7 @@ function App() {
           ) : (
             <>
               {Array.from("1".repeat(desCount)).map((v, index) => (
-                <SkeltonTwo key={index} />
+                <SkeltonTwo key={`${v}_${index}`} />
               ))}
             </>
           )}
