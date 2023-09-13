@@ -7,18 +7,18 @@ import SpacePod from "./ships/Spacepod";
 import classes from "./widget.module.css";
 import { useContext } from "react";
 
-function getSpaceShip(name: string) {
+function getSpaceShip(name: string, isEnabled: boolean) {
   switch (name) {
     case "Space pod":
-      return <SpacePod width={54} height={44} />;
+      return <SpacePod width={54} height={44} enabled={isEnabled} />;
     case "Space rocket":
-      return <SpaceRocket width={47} height={77} />;
+      return <SpaceRocket width={47} height={77} enabled={isEnabled} />;
 
     case "Space shuttle":
-      return <SpaceShuttle width={41} height={73} />;
+      return <SpaceShuttle width={41} height={73} enabled={isEnabled} />;
 
     case "Space ship":
-      return <SpaceShip width={52} height={75} />;
+      return <SpaceShip width={52} height={75} enabled={isEnabled} />;
 
     default:
       return <Default width={47} height={77} />;
@@ -56,7 +56,7 @@ export default function Widget() {
           return (
             <div className={classes.widget__section} key={index}>
               <div className={classes.widget__image}>
-                {getSpaceShip(shipInfo.name)}
+                {getSpaceShip(shipInfo.name, shipInfo.total_no > 0)}
               </div>
               <div className={classes.widget__text}>
                 <h4> {shipInfo.name}</h4>

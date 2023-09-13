@@ -1,10 +1,11 @@
 import classes from "./header.module.css";
 import logoImage from "../../assets/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import menuImage from "@assets/menu_icon.svg";
 import { useState } from "react";
 export default function Header() {
   const [isOpen, setOpen] = useState(false);
+  const location = useLocation();
   function clickHandler() {
     setOpen(!isOpen);
   }
@@ -12,10 +13,15 @@ export default function Header() {
   function linkHandler() {
     setOpen(false);
   }
+
+  function redirect() {
+    if (location && location.pathname === "/") {
+      window.open("https://www.geektrust.com", "_blank");
+    }
+  }
   return (
     <>
       <div className={classes.header}>
-      
         <div className={classes.header__content}>
           <div className={classes.header__logo}>
             <Link to={"/"}>
@@ -34,6 +40,7 @@ export default function Header() {
                 className={classes.header__navItem}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={redirect}
               >
                 <li>Geek Trust Home</li>
               </a>
@@ -45,7 +52,7 @@ export default function Header() {
               <div className={classes["header__mobileDrawer"]}>
                 <ul>
                   <Link
-                    to={"/"}
+                    to={"/test"}
                     className={classes.header__navItem}
                     onClick={linkHandler}
                   >
