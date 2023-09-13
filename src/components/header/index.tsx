@@ -52,7 +52,7 @@ export default function Header() {
               <div className={classes["header__mobileDrawer"]}>
                 <ul>
                   <Link
-                    to={"/test"}
+                    to={"/"}
                     className={classes.header__navItem}
                     onClick={linkHandler}
                   >
