@@ -5,7 +5,7 @@ import { useState } from "react";
 import { ArrowLeft, ArrowRight } from "../common/arrowIcons";
 
 export default function Section1() {
-  const [isVisible, setVisible] = useState<boolean>(true);
+  const [isVisible, setVisible] = useState<boolean>(false);
   function closeHandler() {
     setVisible(!isVisible);
   }

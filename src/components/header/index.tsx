@@ -15,6 +15,7 @@ export default function Header() {
   }
 
   function redirect() {
+   
     if (location && location.pathname === "/") {
       window.open("https://www.geektrust.com", "_blank");
     }
