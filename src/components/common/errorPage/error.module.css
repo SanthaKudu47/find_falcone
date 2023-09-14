@@ -1,0 +1,11 @@
+.errorPage {
+    font-family: Roboto, sans-serif;
+    color: var(--variant-7);
+    font-size: 25px;
+    font-weight: 400;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

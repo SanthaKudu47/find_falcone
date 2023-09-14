@@ -1,4 +1,5 @@
 import { useRouteError } from "react-router-dom";
+import classes from "./error.module.css";
 
 interface ErrorObjectInterface {
   data: string;
@@ -18,7 +19,7 @@ export default function ErrorPage() {
   const error = useRouteError() as ErrorObjectInterface;
 
   return (
-    <div id="error-page">
+    <div id="error-page" className={classes.errorPage}>
       <h1>Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>
       <p>
